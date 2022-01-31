@@ -1,0 +1,282 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Chatbox */
+
+.chatbox {
+  width: 300px;
+  height: 250px;
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.chat-list {
+  list-style-type: none;
+  overflow-y: auto;
+  word-break: break-all;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.chat-list > li {
+  margin-bottom: 5px;
+}
+
+#chat-form {
+  display: flex;
+  justify-content: center;
+
+  margin: 5px 5px;
+}
+#chat-input {
+  width: 100%;
+  font-size: 1.2rem;
+  margin-right: 5px;
+}
+
+#chat-btn {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: #1cbdd2;
+  border: none;
+  border-radius: 3px;
+  font-weight: 600;
+}
+/* scroll-bar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* scroll-bar */
+
+/* End of Chatbox */
+
+.btn-dice-text-container {
+  width: 300px;
+  background-color: cadetblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* DICE SECTION */
+
+.roll-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
+.dice-container {
+  margin: 2px auto;
+  height: 50px;
+  width: 110px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dice {
+  padding: 3px;
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
+  background-color: tomato;
+}
+
+.dot {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.first-face {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-face {
+  display: none;
+  justify-content: space-between;
+}
+.second-face .dot:nth-of-type(2) {
+  align-self: flex-end;
+}
+
+.third-face {
+  display: none;
+  justify-content: space-between;
+}
+.third-face .dot:nth-of-type(2) {
+  align-self: center;
+}
+.third-face .dot:nth-of-type(3) {
+  align-self: flex-end;
+}
+
+.fourth-face,
+.fifth-face,
+.sixth-face {
+  display: none;
+  justify-content: space-between;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fifth-face .column:nth-of-type(2) {
+  justify-content: center;
+}
+
+.show-dice {
+  display: flex;
+}
+
+/* TEXT */
+
+.text-area {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* TABLE SECTION */
+
+.table {
+  margin: 0 auto;
+  max-width: 640px;
+  display: flex;
+  justify-content: space-between;
+  background-color: burlywood;
+}
+
+.left-top,
+.left-bottom,
+.right-top,
+.right-bottom {
+  display: flex;
+}
+
+.left-top,
+.left-bottom {
+  border-right: 2px solid brown;
+}
+.right-top,
+.right-bottom {
+  border-left: 2px solid brown;
+}
+
+.left-top > .bar,
+.right-top > .bar {
+  justify-content: flex-start;
+}
+
+.bar {
+  width: 50px;
+  height: 300px;
+  border: 1px solid brown;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+/* BAR */
+
+.toggle-bar-background {
+  background-color: grey;
+}
+
+/* CHECKER */
+
+.checker {
+  width: 100%;
+  height: 48px;
+  border: 1px solid black;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+.black {
+  background-color: #333;
+}
+
+.white {
+  background-color: white;
+}
+
+.shadow {
+  box-shadow: 5px 5px 10px black;
+}
+
+.invisible {
+  display: none;
+}
+
+/* ARROWS */
+
+.arrow-down,
+.arrow-down-orange {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 280px 24px 0 24px;
+  border-color: #cacaca transparent transparent transparent;
+}
+
+.arrow-down-orange {
+  border-color: #ff7627 transparent transparent transparent;
+}
+
+.arrow-up,
+.arrow-up-orange {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 24px 280px 24px;
+  border-color: transparent transparent #cacaca transparent;
+}
+
+.arrow-up-orange {
+  border-color: transparent transparent #ff7627 transparent;
+}

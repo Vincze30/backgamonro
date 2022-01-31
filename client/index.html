@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="chatbox">
+        <ul class="chat-list"></ul>
+        <form action="" id="chat-form" autocomplete="off">
+          <input type="text" id="chat-input" />
+          <button type="submit" id="chat-btn">Send</button>
+        </form>
+        <!-- <div class="rps-container">
+          <button class="turn" id="rock">rock</button>
+          <button class="turn" id="paper">paper</button>
+          <button class="turn" id="scissors">scissors</button>
+        </div> -->
+      </div>
+      <div class="btn-dice-text-container">
+        <div class="btn-dice-text-container-inner">
+          <button class="roll-btn">roll</button>
+          <div class="dice-container">
+            <div class="dice1">
+              <div class="dice first-face">
+                <span class="dot"> </span>
+              </div>
+              <div class="dice second-face">
+                <span class="dot"> </span>
+                <span class="dot"> </span>
+              </div>
+              <div class="dice third-face">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="fourth-face dice">
+                <div class="column">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+                <div class="column">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+              </div>
+              <div class="fifth-face dice">
+                <div class="column">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+                <div class="column">
+                  <span class="dot"></span>
+                </div>
+                <div class="column">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+              </div>
+              <div class="sixth-face dice">
+                <div class="column">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+                <div class="column">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+              </div>
+            </div>
+            <div class="dice2">
+              <div class="dice first-face">
+                <span class="dot"> </span>
+              </div>
+              <div class="dice second-face">
+                <span class="dot"> </span>
+                <span class="dot"> </span>
+              </div>
+              <div class="dice third-face">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="fourth-face dice">
+                <div class="column">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+                <div class="column">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+              </div>
+              <div class="fifth-face dice">
+                <div class="column">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+                <div class="column">
+                  <span class="dot"></span>
+                </div>
+                <div class="column">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+              </div>
+              <div class="sixth-face dice">
+                <div class="column">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+                <div class="column">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="text-area"></p>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="table">
+      <div class="left-side">
+        <div class="left-top top">
+          <div class="bar" id="13">
+            <div class="black checker"></div>
+            <div class="black checker"></div>
+            <div class="black checker"></div>
+            <div class="black checker"></div>
+            <div class="black checker"></div>
+            <span class="arrow-down"></span>
+          </div>
+          <div class="bar" id="14">
+            <span class="arrow-down-orange"></span>
+          </div>
+          <div class="bar" id="15"><span class="arrow-down"></span></div>
+          <div class="bar" id="16">
+            <span class="arrow-down-orange"></span>
+          </div>
+          <div class="bar" id="17">
+            <div class="white checker"></div>
+            <div class="white checker"></div>
+            <div class="white checker"></div>
+            <span class="arrow-down"></span>
+          </div>
+          <div class="bar" id="18">
+            <span class="arrow-down-orange"></span>
+          </div>
+        </div>
+        <div class="left-bottom">
+          <div class="bar" id="12">
+            <div class="white checker" draggable="true"></div>
+            <div class="white checker"></div>
+            <div class="white checker"></div>
+            <div class="white checker"></div>
+            <div class="white checker"></div>
+            <span class="arrow-up-orange"></span>
+          </div>
+          <div class="bar" id="11"><span class="arrow-up"></span></div>
+          <div class="bar" id="10"><span class="arrow-up-orange"></span></div>
+          <div class="bar" id="9"><span class="arrow-up"></span></div>
+          <div class="bar" id="8">
+            <div class="black checker"></div>
+            <div class="black checker"></div>
+            <div class="black checker"></div>
+            <span class="arrow-up-orange"></span>
+          </div>
+          <div class="bar" id="7"><span class="arrow-up"></span></div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="right-top top">
+          <div class="bar" id="19">
+            <div class="white checker"></div>
+            <div class="white checker"></div>
+            <div class="white checker"></div>
+            <div class="white checker"></div>
+            <div class="white checker"></div>
+            <span class="arrow-down"></span>
+          </div>
+          <div class="bar" id="20">
+            <span class="arrow-down-orange"></span>
+          </div>
+          <div class="bar" id="21"><span class="arrow-down"></span></div>
+          <div class="bar" id="22">
+            <span class="arrow-down-orange"></span>
+          </div>
+          <div class="bar" id="23"><span class="arrow-down"></span></div>
+          <div class="bar" id="24">
+            <div class="black checker"></div>
+            <div class="black checker"></div>
+            <span class="arrow-down-orange"></span>
+          </div>
+        </div>
+        <div class="right-bottom">
+          <div class="bar" id="6">
+            <div class="black checker"></div>
+            <div class="black checker"></div>
+            <div class="black checker"></div>
+            <div class="black checker"></div>
+            <div class="black checker"></div>
+            <span class="arrow-up-orange"></span>
+          </div>
+          <div class="bar" id="5"><span class="arrow-up"></span></div>
+          <div class="bar" id="4"><span class="arrow-up-orange"></span></div>
+          <div class="bar" id="3">
+            <span class="arrow-up"></span>
+          </div>
+          <div class="bar" id="2">
+            <span class="arrow-up-orange"></span>
+          </div>
+          <div class="bar" id="1">
+            <div class="white checker"></div>
+            <div class="white checker"></div>
+            <span class="arrow-up"></span>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <script src="/socket.io/socket.io.js"></script>
+  </body>
+</html>
