@@ -4,27 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Backgammon Ro</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./public/images/dicelogo.png"
+      sizes="32x32"
+    />
+    <script src="/socket.io/socket.io.js"></script>
     <script src="app.js" defer></script>
   </head>
   <body>
     <div class="container">
       <div class="chatbox">
-        <ul class="chat-list"></ul>
+        <ul class="chat-list">
+          <li id="players-connected"></li>
+        </ul>
         <form action="" id="chat-form" autocomplete="off">
           <input type="text" id="chat-input" />
           <button type="submit" id="chat-btn">Send</button>
         </form>
-        <!-- <div class="rps-container">
-          <button class="turn" id="rock">rock</button>
-          <button class="turn" id="paper">paper</button>
-          <button class="turn" id="scissors">scissors</button>
-        </div> -->
       </div>
       <div class="btn-dice-text-container">
         <div class="btn-dice-text-container-inner">
           <button class="roll-btn">roll</button>
+          <button class="end-turn-btn">end turn</button>
           <div class="dice-container">
             <div class="dice1">
               <div class="dice first-face">
@@ -74,6 +79,7 @@
                   <span class="dot"></span>
                 </div>
               </div>
+              <div class="white checker choose-checker invisible"></div>
             </div>
             <div class="dice2">
               <div class="dice first-face">
@@ -123,13 +129,14 @@
                   <span class="dot"></span>
                 </div>
               </div>
+              <div class="black checker choose-checker invisible"></div>
             </div>
           </div>
-          <p class="text-area"></p>
+          <div class="out-of-bord"></div>
         </div>
       </div>
     </div>
-    <!-- <div class="table">
+    <div class="table">
       <div class="left-side">
         <div class="left-top top">
           <div class="bar" id="13">
@@ -226,7 +233,6 @@
           </div>
         </div>
       </div>
-    </div> -->
-    <script src="/socket.io/socket.io.js"></script>
+    </div>
   </body>
 </html>

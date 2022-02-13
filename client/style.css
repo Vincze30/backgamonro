@@ -10,7 +10,7 @@
 
 .container {
   margin: 0 auto;
-  max-width: 800px;
+  width: 640px;
   display: flex;
   justify-content: center;
 }
@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0.5rem;
+  padding: 0.2rem 0.5rem;
 }
 
 .chat-list {
@@ -37,6 +37,10 @@
 
 .chat-list > li {
   margin-bottom: 5px;
+}
+
+#players-connected {
+  text-decoration: underline;
 }
 
 #chat-form {
@@ -86,10 +90,11 @@
 
 .btn-dice-text-container {
   width: 300px;
-  background-color: cadetblue;
+  background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid #000;
 }
 
 /* DICE SECTION */
@@ -99,8 +104,27 @@
   margin: 0 auto;
   padding: 1rem;
   text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: #1cbdd2;
+  border: none;
+  border-radius: 3px;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
+.end-turn-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 1rem;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: #1cbdd2;
+  border: none;
+  border-radius: 3px;
+  font-weight: 600;
+}
 .dice-container {
   margin: 2px auto;
   height: 50px;
@@ -182,7 +206,7 @@
 
 .table {
   margin: 0 auto;
-  max-width: 640px;
+  width: 640px;
   display: flex;
   justify-content: space-between;
   background-color: burlywood;
@@ -228,7 +252,7 @@
 /* CHECKER */
 
 .checker {
-  width: 100%;
+  width: 48px;
   height: 48px;
   border: 1px solid black;
   border-radius: 50%;
@@ -250,6 +274,10 @@
 .invisible {
   display: none;
 }
+
+/* .dice-container .checker {
+  display: none;
+} */
 
 /* ARROWS */
 
